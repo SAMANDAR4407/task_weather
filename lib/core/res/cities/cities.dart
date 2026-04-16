@@ -1,0 +1,15 @@
+enum City {
+  toshkent,
+  fargona,
+  andijon,
+  namangan,
+  sirdaryo,
+  jizzax,
+  samarqand,
+  buxoro,
+  navoiy,
+  qashqadaryo,
+  surxondaryo,
+  xorazm,
+  nukus,
+}
