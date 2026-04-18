@@ -1,7 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
-Future<bool> handleLocationPermission() async {
+Future<bool> _handleLocationPermission() async {
   bool serviceEnabled;
   LocationPermission permission;
 
@@ -23,13 +24,19 @@ Future<bool> handleLocationPermission() async {
 }
 
 Future<void> getCurrentPosition(Function(Position) update) async {
-  final hasPermission = await handleLocationPermission();
+  final hasPermission = await _handleLocationPermission();
   if (!hasPermission) return;
   await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high)
+      locationSettings: LocationSettings(accuracy: LocationAccuracy.high))
       .then((Position position) {
     update(position);
   }).catchError((e) {
     debugPrint(e);
   });
+}
+
+void networkLogging(Object? message) {
+  if (kDebugMode) {
+    print('HTTP: ${message.toString()}');
+  }
 }

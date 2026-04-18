@@ -4,6 +4,6 @@ part of 'home_bloc.dart';
 sealed class HomeEvent {}
 
 class FetchData extends HomeEvent {
-  final String latLong;
-  FetchData({required this.latLong});
+  final String? query;
+  FetchData({required this.query});
 }
