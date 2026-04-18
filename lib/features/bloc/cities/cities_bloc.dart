@@ -1,17 +1,17 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:task_weather/common/data/repository/repository_impl.dart';
-import 'package:task_weather/common/domain/entities/entities.dart';
 
+import '../../../common/data/repository/repository_impl.dart';
+import '../../../common/domain/entities/entities.dart';
 import '../../../core/core.dart';
 
-part 'home_event.dart';
-part 'home_state.dart';
+part 'cities_event.dart';
+part 'cities_state.dart';
 
-class HomeBloc extends Bloc<HomeEvent, HomeState> {
+class CitiesBloc extends Bloc<CitiesEvent, CitiesState> {
   final _repo = RepositoryImpl();
-  HomeBloc() : super(HomeState()) {
-    on<HomeEvent>((event, emit) async {
+  CitiesBloc() : super(CitiesState()) {
+    on<CitiesEvent>((event, emit) async {
       switch(event) {
         case FetchData():
           await _onFetchData(event, emit);

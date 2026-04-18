@@ -3,7 +3,7 @@ const current = '/current.json';
 const apiKey = '456bfec5bead493bb87142302230105';
 
 const String toshkent = 'toshkent';
-const String fargona = 'fargona';
+const String fargona = 'farghona';
 const String andijon = 'andijon';
 const String namangan = 'namangan';
 const String sirdaryo = 'guliston';

@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "uz.kamalov.task_weather"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

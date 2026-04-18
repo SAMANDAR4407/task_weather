@@ -12,4 +12,3 @@ class HomeState {
       HomeState(lat: lat ?? this.lat, lon: lon ?? this.lon, status: status ?? this.status, data: data ?? this.data);
 }
 
-enum EnumStatus { initial, loading, success, fail }

@@ -40,3 +40,5 @@ void networkLogging(Object? message) {
     print('HTTP: ${message.toString()}');
   }
 }
+
+enum EnumStatus { initial, loading, success, fail }
